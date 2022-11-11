@@ -42,10 +42,31 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+          <div class="image">
+            <img src="{{ asset('backend/img/user2-160x160.jpg') }}" style="width: 25px!important" class="img-circle elevation-2" alt="User Image">
+          </div>
         </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
+
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> Home
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> Profile
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> Account
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="{{ route('admin.logout') }}" class="dropdown-item dropdown-footer">Logout</a>
+        </div>
       </li>
+
     </ul>
   </nav>
