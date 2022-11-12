@@ -1,3 +1,11 @@
+<style type="text/css">
+  .dropdown-menu-lg {
+    max-width: 250px;
+    min-width: 165px;
+    padding: 0;
+}
+</style>
+
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
@@ -52,18 +60,18 @@
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
 
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> Home
+          <a href="{{ route('admin.profile') }}" class="dropdown-item">
+            <i class="fas fa-user mr-2"></i> Profile
           </a>
-          <div class="dropdown-divider"></div>
+
           <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> Profile
+            <i class="fas fa-users mr-2"></i> 
           </a>
-          <div class="dropdown-divider"></div>
+
           <a href="#" class="dropdown-item">
             <i class="fas fa-file mr-2"></i> Account
           </a>
-          <div class="dropdown-divider"></div>
+
           <a href="{{ route('admin.logout') }}" class="dropdown-item dropdown-footer">Logout</a>
         </div>
       </li>
