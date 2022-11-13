@@ -46,7 +46,7 @@
                 </li>
               </ul>
 
-              <a href="#" class="btn btn-primary btn-block"><b>Edit Profile</b></a>
+              <a href="{{ route('admin.editprofile') }}" class="btn btn-primary btn-block"><b>Edit Profile</b></a>
             </div>
             <!-- /.card-body -->
           </div>
