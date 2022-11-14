@@ -39,16 +39,31 @@
                     <div class="form-group">
                       <label for="oldpassword">Old Password</label>
                       <input type="password" class="form-control" name="oldpassword"  placeholder="Enter Old Password">
+                      @error('oldpassword')
+                      <span class="text-danger">
+                        {{ $message }}
+                      </span>
+                     @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="newpassword">New Password</label>
                         <input type="password" class="form-control" name="newpassword"  placeholder="Enter New Password">
+                        @error('newpassword')
+                        <span class="text-danger">
+                          {{ $message }}
+                        </span>
+                       @enderror
                       </div>
 
                       <div class="form-group">
                         <label for="confirmpassword">Confirm Password</label>
                         <input type="password" class="form-control" name="confirm_password"  placeholder="Enter Confirm Password">
+                        @error('confirm_password')
+                        <span class="text-danger">
+                          {{ $message }}
+                        </span>
+                        @enderror
                       </div>
             
                   </div>
