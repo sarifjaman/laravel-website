@@ -24,6 +24,10 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/admin/profile', 'profile')->name('admin.profile');
     Route::get('/admin/edit/profile', 'editprofile')->name('admin.editprofile');
     Route::post('/admin/store/profile', 'storeprofile')->name('store.profile');
+
+    //Change Password
+    Route::get('/change/password', 'changepassword')->name('change.password');
+    Route::post('/update/password', 'updatepassword')->name('update.password');
 });
 
 Route::get('/dashboard', function () {

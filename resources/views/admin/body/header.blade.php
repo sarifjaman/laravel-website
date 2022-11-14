@@ -69,8 +69,8 @@
             <i class="fas fa-user mr-2"></i> Profile
           </a>
 
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 
+          <a href="{{ route('change.password') }}" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> Change Password
           </a>
 
           <a href="#" class="dropdown-item">

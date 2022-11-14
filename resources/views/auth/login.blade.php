@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="{{ asset('backend/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- icheck bootstrap -->
   <link rel="stylesheet" href="{{ asset('backend/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+    <!--toastr Css-->
+    <link type="text/css" rel="stylesheet" href="{{ asset('backend/css/toastr.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('backend/css/adminlte.min.css') }}">
 </head>
@@ -70,10 +72,36 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="{{ asset('backend/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!--Toastr-->
+<script type="text/javascript" src="{{ asset('backend/js/toastr.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="{{ asset('backend/js/adminlte.min.js') }}"></script>
+
+<script type="text/javascript">
+  @if(Session::has('message'))
+    var type = "{{ Session::get('alert-type','info') }}";
+
+    switch(type){
+      case 'info':
+        toastr.info("{{ Session::get('message') }}");
+        break;
+
+        case 'success':
+          toastr.success("{{ Session::get('message') }}");
+          break;
+
+          case 'warning':
+            toastr.warning("{{ Session::get('message') }}");
+            break;
+
+            case 'error':
+              toastr.error("{{ Session::get('message') }}");
+              break;
+    }
+  @endif
+</script>
 </body>
 </html>

@@ -17,7 +17,12 @@ class AdminController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        $notification = array(
+            'message' => 'User logout successfully!',
+            'alert-type' => 'success'
+        );
+
+        return redirect('/login')->with($notification);
     }
 
     //Profile
@@ -28,6 +33,7 @@ class AdminController extends Controller
         return view('admin.admin_profile_view', compact('admininfo'));
     }
 
+    //Show Edit Page
     public function editprofile()
     {
         $id = Auth::user()->id;
@@ -35,6 +41,7 @@ class AdminController extends Controller
         return view('admin.admin_profile_edit', compact('admininfoedit'));
     }
 
+    //Update Profile
     public function storeprofile(Request $request)
     {
         $id = Auth::user()->id;
@@ -59,5 +66,16 @@ class AdminController extends Controller
         );
 
         return redirect()->route('admin.profile')->with($notification);
+    }
+
+    //Change Password Show
+    public function changepassword()
+    {
+        return view('admin.admin_change_password');
+    }
+
+    //Update Password
+    public function updatepassword(Request $request)
+    {
     }
 }
