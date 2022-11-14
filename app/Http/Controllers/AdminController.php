@@ -44,11 +44,11 @@ class AdminController extends Controller
         $data->username = $request->username;
         $data->email = $request->email;
 
-        if ($request->file('profile_image')) {
-            $file = $request->file('profile_image');
-            $filename = date('YmdHi') . $file->getClientOriginalExtension();
-            $file->move(public_path('upload/admin_images', $filename));
-            $data['profile_image'] = $filename;
+        if ($request->has('profile_image')) {
+            $file = $request->profile_image;
+            $image_new_name = time() . '.' . $file->getClientOriginalExtension();
+            $file->move('upload/admin_images/', $image_new_name);
+            $data->profile_image = '/upload/admin_images/' . $image_new_name;
         }
 
         $data->save();

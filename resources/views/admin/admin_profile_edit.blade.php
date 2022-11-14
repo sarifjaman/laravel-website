@@ -64,10 +64,10 @@
                         </div>
                       </div>
                     </div>
-
+{{-- {{$admininfoedit->profile_image}} --}}
                     <div class="form-group">
                         <div class="image">
-                            <img src="{{ asset('backend/img/user2-160x160.jpg') }}" id="showImage" style="width: 100px!important" class="elevation-2" alt="User Image">
+                            <img src="{{ (!empty($admininfoedit->profile_image)) ? $admininfoedit->profile_image : url('upload/no-image.jpg') }}" id="showImage" style="width: 100px!important" class="elevation-2" alt="User Image">
                           </div>
                     </div>
             

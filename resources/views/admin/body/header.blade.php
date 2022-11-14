@@ -51,12 +51,17 @@
         </a>
       </li>
 
+      @php
+         $id = Auth::user()->id;
+         $admindata = App\Models\User::find($id); 
+      @endphp
 
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+        <a class="nav-link d-flex" data-toggle="dropdown" href="#" aria-expanded="false">
           <div class="image">
-            <img src="{{ asset('backend/img/user2-160x160.jpg') }}" style="width: 25px!important" class="img-circle elevation-2" alt="User Image">
+            <img src="{{ (!empty($admindata->profile_image)) ? $admindata->profile_image : url('upload/no-image.jpg') }}" style="width: 25px!important" class="img-circle elevation-2" alt="User Image">
           </div>
+          <p class="ml-2">{{ $admindata->username }}</p>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
 

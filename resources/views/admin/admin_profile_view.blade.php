@@ -27,7 +27,7 @@
           <div class="card card-primary card-outline">
             <div class="card-body box-profile">
               <div class="text-center">
-                <img class="profile-user-img img-fluid img-circle" src="{{ asset('backend/img/user4-128x128.jpg') }}" alt="User profile picture">
+                <img class="profile-user-img img-fluid img-circle" src="{{ (!empty($admininfo->profile_image)) ? $admininfo->profile_image : url('upload/no-image.jpg') }}" alt="User profile picture">
               </div>
 
               <h3 class="profile-username text-center">{{ $admininfo->name }}</h3>
