@@ -72,66 +72,29 @@
             </p>
           </a>
         </li>
+
+        <!--All Slider Start-->
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-copy"></i>
+            <i class="nav-icon far fa-images"></i>
             <p>
-              Layout Options
+             Home Slider Setup
               <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right">6</span>
             </p>
           </a>
           <ul class="nav nav-treeview">
+         
             <li class="nav-item">
-              <a href="../layout/top-nav.html" class="nav-link">
+              <a href="{{ route('home.slide') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Top Navigation</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="../layout/top-nav-sidebar.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Top Navigation + Sidebar</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="../layout/boxed.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Boxed</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="../layout/fixed-sidebar.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Fixed Sidebar</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="../layout/fixed-sidebar-custom.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Fixed Sidebar <small>+ Custom Area</small></p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="../layout/fixed-topnav.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Fixed Navbar</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="../layout/fixed-footer.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Fixed Footer</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="../layout/collapsed-sidebar.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Collapsed Sidebar</p>
+                <p>Home Slide</p>
               </a>
             </li>
           </ul>
         </li>
+           <!--All Slider end-->
+
+
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-chart-pie"></i>

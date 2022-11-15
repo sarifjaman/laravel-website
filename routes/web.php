@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\home\HomeSliderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
 
 //Admin All Route
@@ -28,6 +29,12 @@ Route::controller(AdminController::class)->group(function () {
     //Change Password
     Route::get('/change/password', 'changepassword')->name('change.password');
     Route::post('/update/password', 'updatepassword')->name('update.password');
+});
+
+//Home Slider
+Route::controller(HomeSliderController::class)->group(function () {
+    Route::get('/home/slide', 'homeslide')->name('home.slide');
+    Route::post('/update/slider', 'updateslider')->name('update.slider');
 });
 
 Route::get('/dashboard', function () {
