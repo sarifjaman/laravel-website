@@ -94,6 +94,35 @@
         </li>
            <!--All Slider end-->
 
+           <!--All about start-->
+           <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-exclamation-circle"></i>
+              <p>
+               About Page Setup
+               <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+           
+              <li class="nav-item">
+                <a href="{{ route('about.page') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>About page</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{ route('about.multi.image') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>About Multi Image</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+           <!--All about end-->
+
 
         <li class="nav-item">
           <a href="#" class="nav-link">

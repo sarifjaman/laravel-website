@@ -16,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{ asset('backend/plugins/fontawesome-free/css/all.min.css') }}">
   <!--toastr Css-->
   <link type="text/css" rel="stylesheet" href="{{ asset('backend/css/toastr.min.css') }}">
+  <!--Summernote-->
+  <link type="text/css" rel="stylesheet" href="{{ asset('backend/css/summernote.min.css') }}" />
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('backend/css/adminlte.min.css') }}">
 </head>
@@ -57,6 +59,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!--Toastr-->
 <script type="text/javascript" src="{{ asset('backend/js/toastr.min.js') }}"></script>
+<!--Summernote-->
+<script type="text/javascript" src="{{ asset('backend/js/summernote.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('backend/js/adminlte.min.js') }}"></script>
 
@@ -82,6 +86,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
               break;
     }
   @endif
+
+  $('#summernote').summernote({
+    placeholder: 'Hello Bootstrap 4',
+    tabsize: 2,
+    height: 300
+  });
 </script>
 
 </body>
