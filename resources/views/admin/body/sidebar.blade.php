@@ -118,6 +118,13 @@
                   <p>About Multi Image</p>
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a href="{{ route('all.multi.image') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Multi Image</p>
+                </a>
+              </li>
               
             </ul>
           </li>

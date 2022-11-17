@@ -18,6 +18,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link type="text/css" rel="stylesheet" href="{{ asset('backend/css/toastr.min.css') }}">
   <!--Summernote-->
   <link type="text/css" rel="stylesheet" href="{{ asset('backend/css/summernote.min.css') }}" />
+    <!--Sweetalert2-->
+    <script type="text/javascript" src="{{ asset('backend/plugins/sweetalert2/sweetalert2.all.min.css') }}"></script>
+
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('backend/css/adminlte.min.css') }}">
 </head>
@@ -61,6 +64,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script type="text/javascript" src="{{ asset('backend/js/toastr.min.js') }}"></script>
 <!--Summernote-->
 <script type="text/javascript" src="{{ asset('backend/js/summernote.min.js') }}"></script>
+  <!--Data Table Js-->
+  <script src="{{ asset('backend/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+  <script src="{{ asset('backend/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+  <!--Sweetalert2-->
+  <script type="text/javascript" src="{{ asset('backend/plugins/sweetalert2/sweetalert2.all.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('backend/js/code.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('backend/js/adminlte.min.js') }}"></script>
 

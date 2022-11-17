@@ -1,5 +1,6 @@
 @php
 $aboutpage = App\Models\About::find(1);
+$multi = App\Models\MultiImage::all();
 @endphp
 
 <section id="aboutSection" class="about">
@@ -7,11 +8,13 @@ $aboutpage = App\Models\About::find(1);
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <ul class="about__icons__wrap">
+                    @foreach($multi as $item)
                     <li>
-                        <img class="light" src="{{ asset('frontend/assets/img/icons/xd_light.png') }}" alt="XD">
-                        <img class="dark" src="{{ asset('frontend/assets/img/icons/xd.png') }}" alt="XD">
+                        <img class="light" src="{{ asset($item->multi_image) }}" alt="XD">
+                        {{-- <img class="dark" src="{{ asset('frontend/assets/img/icons/xd.png') }}" alt="XD"> --}}
                     </li>
-                    <li>
+                    @endforeach
+                    {{-- <li>
                         <img class="light" src="{{ asset('frontend/assets/img/icons/skeatch_light.png') }}" alt="Skeatch">
                         <img class="dark" src="{{ asset('frontend/assets/img/icons/skeatch.png') }}" alt="Skeatch">
                     </li>
@@ -34,7 +37,7 @@ $aboutpage = App\Models\About::find(1);
                     <li>
                         <img class="light" src="{{ asset('frontend/assets/img/icons/figma_light.png') }}" alt="Figma">
                         <img class="dark" src="{{ asset('frontend/assets/img/icons/figma.png') }}" alt="Figma">
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
             <div class="col-lg-6">
