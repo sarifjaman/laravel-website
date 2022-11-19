@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Frontend;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\home\HomeSliderController;
+use App\Http\Controllers\Home\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,6 +52,19 @@ Route::controller(AboutController::class)->group(function () {
     Route::post('/update/multi/image', 'updatemultiimage')->name('update.multi.image');
     Route::get('/delete/multi/image/{id}', 'deletemultiimage')->name('delete.multi.image');
 });
+
+//Portfolio
+Route::controller(PortfolioController::class)->group(function () {
+    Route::get('/all/portfolio', 'allportfolio')->name('all.portfolio');
+    Route::get('/add/portfolio', 'addportfolio')->name('add.portfolio');
+    Route::post('/store/portfolio', 'storeportfolio')->name('store.portfolio');
+    Route::get('/edit/portfolio/{id}', 'editprortfolio')->name('edit.prortfolio');
+    Route::post('/update/portfolio', 'updateportfolio')->name('update.portfolio');
+    Route::get('/delete/portfolio/{id}', 'deleteportfolio')->name('delete.portfolio');
+    Route::get('/portfolio/detail/{id}', 'portfoliodetail')->name('portfolio.detail');
+});
+
+// Route::get('/', [Frontend::class, 'multiimageshow'])->name('multi.image.show');
 
 Route::get('/dashboard', function () {
     return view('admin.index');
