@@ -18,6 +18,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link type="text/css" rel="stylesheet" href="{{ asset('backend/css/toastr.min.css') }}">
   <!--Summernote-->
   <link type="text/css" rel="stylesheet" href="{{ asset('backend/css/summernote.min.css') }}" />
+  <!--Tags Input-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.css" >
+  <link type="text/css" rel="stylesheet" href="{{ asset('backend/css/bootstrap-tagsinput.css') }}" />
     <!--Sweetalert2-->
     <script type="text/javascript" src="{{ asset('backend/plugins/sweetalert2/sweetalert2.all.min.css') }}"></script>
 
@@ -25,6 +28,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{ asset('backend/css/adminlte.min.css') }}">
 </head>
 <body class="hold-transition sidebar-mini">
+
+
+
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -70,6 +76,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!--Sweetalert2-->
   <script type="text/javascript" src="{{ asset('backend/plugins/sweetalert2/sweetalert2.all.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('backend/js/code.js') }}"></script>
+  <!--Tags Input-->
+  <script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js" ></script>
+  <script type="text/javascript" src="{{ asset('backend/js/bootstrap-tagsinput.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('backend/js/adminlte.min.js') }}"></script>
 

@@ -160,6 +160,66 @@
         </li>
         <!--Portfolio End-->
 
+        <!--All Blog Category start-->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fas fa-th-list"></i>
+            <p>
+             Blog Category Setup
+             <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+         
+            <li class="nav-item">
+              <a href="{{ route('all.blog.category') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>All Blog Category page</p>
+              </a>
+            </li> 
+            
+            <li class="nav-item">
+              <a href="{{ route('add.blog.category') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Add Blog Category page</p>
+              </a>
+            </li> 
+            
+
+          </ul>
+        </li>
+         <!--All Blog Category end-->
+
+              <!--All Blog Category start-->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fas fa-blog"></i>
+            <p>
+             Blog Setup
+             <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+         
+            <li class="nav-item">
+              <a href="{{ route('all.blog') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>All Blog page</p>
+              </a>
+            </li> 
+            
+            <li class="nav-item">
+              <a href="{{ route('add.blog') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Add Blog Category page</p>
+              </a>
+            </li> 
+            
+
+          </ul>
+        </li>
+         <!--All Blog Category end-->
+
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-tree"></i>
