@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="{{ asset('frontend/assets/css/fontawesome-all.min.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/assets/css/slick.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/assets/css/default.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('frontend/assets/css/toastr.min.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
     </head>
@@ -69,7 +70,32 @@
         <script src="{{ asset('frontend/assets/js/slick.min.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/ajax-form.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('frontend/assets/js/toastr.min.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/plugins.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+
+        <script type="text/javascript">
+          @if(Session::has('message'))
+    var type = "{{ Session::get('alert-type','info') }}";
+
+    switch(type){
+      case 'info':
+        toastr.info("{{ Session::get('message') }}");
+        break;
+
+        case 'success':
+          toastr.success("{{ Session::get('message') }}");
+          break;
+
+          case 'warning':
+            toastr.warning("{{ Session::get('message') }}");
+            break;
+
+            case 'error':
+              toastr.error("{{ Session::get('message') }}");
+              break;
+    }
+  @endif
+        </script>
     </body>
 </html>

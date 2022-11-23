@@ -5,6 +5,7 @@ use App\Http\Controllers\Frontend;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
+use App\Http\Controllers\Home\ContactController;
 use App\Http\Controllers\Home\Footercontroller;
 use App\Http\Controllers\home\HomeSliderController;
 use App\Http\Controllers\Home\PortfolioController;
@@ -94,6 +95,12 @@ Route::controller(BlogController::class)->group(function () {
 Route::controller(Footercontroller::class)->group(function () {
     Route::get('/all/footer', 'allfooter')->name('all.footer');
     Route::post('/update/footer', 'updatefooter')->name('update.footer');;
+});
+
+//Contact
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contact', 'contactme')->name('contact.me');
+    Route::post('/store/message', 'storemessage')->name('store.message');
 });
 
 // Route::get('/', [Frontend::class, 'multiimageshow'])->name('multi.image.show');
