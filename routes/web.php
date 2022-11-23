@@ -5,6 +5,7 @@ use App\Http\Controllers\Frontend;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
+use App\Http\Controllers\Home\Footercontroller;
 use App\Http\Controllers\home\HomeSliderController;
 use App\Http\Controllers\Home\PortfolioController;
 use Illuminate\Support\Facades\Route;
@@ -87,6 +88,12 @@ Route::controller(BlogController::class)->group(function () {
     Route::get('/blog/details/{id}', 'blogdetails')->name('blog.details');
     Route::get('/categories/blog/{id}', 'categoriesblog')->name('categories.blog');
     Route::get('/our/blog', 'ourblog')->name('our.blog');
+});
+
+//Footer
+Route::controller(Footercontroller::class)->group(function () {
+    Route::get('/all/footer', 'allfooter')->name('all.footer');
+    Route::post('/update/footer', 'updatefooter')->name('update.footer');;
 });
 
 // Route::get('/', [Frontend::class, 'multiimageshow'])->name('multi.image.show');
