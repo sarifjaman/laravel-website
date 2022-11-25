@@ -1,6 +1,10 @@
 @extends('frontend.main_master')
  @section('main')
 
+ @section('title')
+ Home - Basic Websile
+ @endsection
+
                <!--Banner Part Start-->
                @include('frontend.home_all.home_slider')
             <!--Banner Part End-->

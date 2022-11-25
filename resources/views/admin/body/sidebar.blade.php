@@ -192,6 +192,27 @@
         </li>
          <!--All Blog Category end-->
 
+          <!--Message Section Start-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-envelope-square"></i>
+              <p>
+               Message Setup
+               <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+           
+              <li class="nav-item">
+                <a href="{{ route('message.all') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Message</p>
+                </a>
+              </li> 
+            </ul>
+          </li>
+           <!--Message Section End-->
+
          <!--Footer Section Start-->
          <li class="nav-item">
           <a href="#" class="nav-link">
